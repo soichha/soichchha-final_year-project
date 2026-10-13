@@ -1,0 +1,301 @@
+@layer components {
+
+    .app-container {
+        @apply min-h-screen bg-slate-50 flex flex-col;
+    }
+
+    .main-content {
+        @apply container mx-auto px-4 py-8 flex-1;
+    }
+
+    .navbar {
+        @apply fixed top-0 w-full bg-white/95 backdrop-blur-md z-50 shadow-md border-b border-slate-200 transition-all duration-300;
+    }
+
+    .navbar-container {
+        @apply container mx-auto px-4 h-20 flex justify-between items-center;
+    }
+
+    .nav-link {
+        @apply transition px-1 py-1 relative font-medium;
+    }
+
+    .nav-link-active {
+        @apply text-blue-600 font-bold;
+    }
+
+    .nav-link-inactive {
+        @apply text-slate-600 hover:text-blue-600;
+    }
+
+    .nav-indicator {
+        @apply absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transform transition-transform duration-300;
+    }
+
+    .lang-toggle {
+        @apply flex items-center gap-1 px-3 py-1.5 rounded-full border border-slate-200 bg-slate-50 text-sm font-semibold hover:border-blue-300 transition;
+    }
+
+    .lang-option {
+        @apply text-slate-400;
+    }
+
+    .lang-option-active {
+        @apply text-blue-600;
+    }
+
+    .lang-divider {
+        @apply text-slate-300;
+    }
+
+    .btn-submit {
+        @apply w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-100;
+    }
+
+    .footer-container {
+        @apply bg-slate-900 text-white py-4;
+    }
+
+    .footer-bottom-bar {
+        @apply border-t border-slate-800 bg-slate-950;
+    }
+
+    .footer-copyright {
+        @apply container mx-auto px-4 text-center text-sm text-slate-500 pt-2;
+    }
+
+    .brand-logo {
+        @apply flex items-center gap-2 text-slate-900 font-bold text-xl no-underline;
+    }
+
+    .brand-icon {
+        @apply text-blue-600;
+    }
+
+    .brand-text {
+        @apply text-inherit;
+    }
+
+    .modal-overlay {
+        @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-[9999];
+    }
+
+    .btn-submit {
+        @apply w-full bg-blue-600 text-white py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-100;
+    }
+
+    .status-page-overlay {
+        @apply min-h-screen flex flex-col items-center justify-center bg-slate-50 p-4;
+    }
+
+    .status-page-card {
+        @apply bg-white p-8 rounded-2xl shadow-xl max-w-md w-full text-center flex flex-col items-center gap-4;
+    }
+
+    .status-icon-wrapper {
+        @apply p-4 rounded-full;
+    }
+
+    .modal-container {
+        @apply bg-white rounded-2xl w-full max-w-lg overflow-hidden shadow-2xl;
+    }
+
+    .modal-header {
+        @apply p-4 border-b flex justify-between items-center;
+    }
+
+    .modal-body {
+        @apply p-4;
+    }
+
+    .modal-footer {
+        @apply p-4 bg-slate-50 border-t;
+    }
+}
+
+@media print {
+
+    @page {
+        size: A4 portrait;
+        margin: 18mm;
+    }
+
+    html,
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100%;
+        height: auto;
+        background: #fff !important;
+        overflow: hidden !important;
+
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    body * {
+        visibility: hidden;
+    }
+
+    .modal-overlay,
+    .modal-overlay * {
+        visibility: visible;
+    }
+
+    .modal-overlay {
+
+        position: fixed !important;
+        inset: 0 !important;
+
+        display: flex !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        background: white !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .modal-overlay > div {
+
+        width: 145mm !important;
+        max-width: 145mm !important;
+
+        margin: 15mm auto !important;
+
+        background: white !important;
+
+        border: 1px solid #d1d5db !important;
+
+        border-radius: 6px !important;
+
+        box-shadow: none !important;
+
+        overflow: visible !important;
+    }
+
+    .overflow-auto,
+    .overflow-y-auto,
+    .overflow-hidden {
+
+        overflow: visible !important;
+        max-height: none !important;
+    }
+
+    button,
+    .print\:hidden {
+
+        display: none !important;
+    }
+
+    .p-8 { padding: 16px !important; }
+    .p-6 { padding: 14px !important; }
+    .p-5 { padding: 12px !important; }
+    .p-4 { padding: 10px !important; }
+
+    .mb-8 { margin-bottom: 14px !important; }
+    .mb-6 { margin-bottom: 12px !important; }
+    .mb-4 { margin-bottom: 8px !important; }
+
+    .gap-8 { gap: 12px !important; }
+    .gap-6 { gap: 10px !important; }
+    .gap-4 { gap: 8px !important; }
+
+    h1,
+    h2,
+    h3 {
+
+        margin: 0 0 6px 0 !important;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 18px !important;
+    }
+
+    p {
+
+        margin: 2px 0 !important;
+        line-height: 1.3;
+        font-size: 11px !important;
+    }
+
+    table {
+
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+
+    th,
+    td {
+
+        border: 1px solid #e5e7eb !important;
+        padding: 6px 8px !important;
+        font-size: 11px !important;
+    }
+
+    table thead th {
+
+        background: #f8fafc !important;
+        font-weight: bold !important;
+    }
+
+    tfoot td {
+
+        font-weight: bold !important;
+    }
+
+    table,
+    tr,
+    td,
+    th,
+    .grid {
+
+        page-break-inside: avoid !important;
+    }
+
+    .shadow,
+    .shadow-lg,
+    .shadow-xl,
+    .shadow-2xl {
+
+        box-shadow: none !important;
+    }
+
+    .bg-slate-900 {
+
+        background: #0f172a !important;
+        color: white !important;
+    }
+
+    .bg-green-50 {
+
+        background: #ecfdf5 !important;
+    }
+
+    .bg-amber-50 {
+
+        background: #fffbeb !important;
+    }
+
+    .text-blue-600 {
+
+        color: #2563eb !important;
+    }
+
+    .text-green-600 {
+
+        color: #16a34a !important;
+    }
+
+    .text-amber-600 {
+
+        color: #d97706 !important;
+    }
+
+    img {
+
+        max-width: 100% !important;
+    }
+
+}

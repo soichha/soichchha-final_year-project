@@ -1,0 +1,49 @@
+@layer components {
+    .customer-layout {
+        @apply min-h-screen bg-slate-50;
+    }
+
+    .customer-hero {
+        @apply bg-blue-600 rounded-2xl p-8 text-white shadow-lg;
+    }
+
+    .customer-card {
+        @apply bg-white p-6 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition flex flex-col;
+    }
+
+    .customer-action-icon {
+        @apply p-4 rounded-full w-fit mb-4 transition;
+    }
+
+    .booking-card {
+        @apply bg-white p-6 rounded-xl shadow-sm border border-slate-100 flex flex-col md:flex-row justify-between items-start md:items-center gap-4;
+    }
+
+    .booking-id {
+        @apply font-bold text-lg text-blue-600;
+    }
+
+    .booking-info-label {
+        @apply font-medium text-slate-700;
+    }
+
+    .booking-empty-state {
+        @apply bg-white p-12 rounded-xl text-center border border-dashed border-slate-300;
+    }
+
+    .selection-card {
+        @apply border p-4 rounded-xl cursor-pointer transition-all hover:bg-slate-50 flex flex-col items-center gap-2;
+    }
+
+    .selection-card-active {
+        @apply bg-blue-50 border-blue-500 ring-1 ring-blue-500;
+    }
+
+    .selection-card-active-green {
+        @apply bg-green-50 border-green-500 ring-1 ring-green-500;
+    }
+
+    .summary-panel {
+        @apply h-fit bg-white p-6 rounded-xl shadow-sm border border-slate-100 lg:sticky lg:top-24;
+    }
+}

@@ -1,0 +1,202 @@
+@layer components {
+
+    .landing-container {
+        @apply min-h-screen flex flex-col font-sans;
+    }
+
+    .hero-section {
+        @apply pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-50 flex-1;
+    }
+
+    .hero-content-wrapper {
+        @apply container mx-auto px-4 text-center;
+    }
+
+    .hero-title {
+        @apply text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 leading-tight;
+    }
+
+    .hero-subtitle {
+        @apply text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed;
+    }
+
+    .hero-actions {
+        @apply flex flex-col md:flex-row items-center justify-center gap-4;
+    }
+
+    .btn-hero-primary {
+        @apply px-8 py-4 bg-green-600 hover:bg-green-700 text-white text-lg rounded-xl font-bold shadow-xl shadow-green-200 flex items-center gap-2 transition transform hover:-translate-y-1;
+    }
+
+    .btn-hero-secondary {
+        @apply px-8 py-4 bg-white hover:bg-slate-50 text-slate-800 text-lg rounded-xl font-bold border border-slate-200 shadow-lg flex items-center gap-2 transition transform hover:-translate-y-1;
+    }
+
+    .features-section {
+        @apply py-20 bg-white;
+    }
+
+    .features-container {
+        @apply container mx-auto px-4;
+    }
+
+    .section-header {
+        @apply text-center mb-16;
+    }
+
+    .section-title {
+        @apply text-3xl font-bold text-slate-900 mb-4;
+    }
+
+    .section-subtitle {
+        @apply text-slate-500 max-w-2xl mx-auto;
+    }
+
+    .features-grid {
+        @apply grid grid-cols-1 md:grid-cols-3 gap-8;
+    }
+
+    .feature-card {
+        @apply p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-xl transition;
+    }
+
+    .feature-icon-wrapper {
+        @apply w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition;
+    }
+
+    .feature-card:hover .feature-icon-wrapper {
+        @apply scale-110;
+    }
+
+    .progress-bar-container {
+        @apply w-full bg-slate-100 h-2 rounded-full mb-4 overflow-hidden;
+    }
+
+    .progress-bar {
+        @apply h-full rounded-full;
+    }
+
+    .badge-feature {
+        @apply inline-block mt-4 px-3 py-1 text-xs font-bold rounded-full;
+    }
+
+    .calculator-section {
+        @apply py-20 bg-gradient-to-br from-slate-50 to-blue-50;
+    }
+
+    .calculator-container {
+        @apply container mx-auto px-4;
+    }
+
+    .calculator-card {
+        @apply max-w-3xl mx-auto bg-white rounded-2xl shadow-xl border border-slate-100 p-6 md:p-10;
+    }
+
+    .calculator-form {
+        @apply space-y-5;
+    }
+
+    .calc-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-5;
+    }
+
+    .calc-type-toggle {
+        @apply flex gap-2;
+    }
+
+    .calc-type-btn {
+        @apply flex-1 px-4 py-2 rounded-lg border border-slate-200 text-slate-600 font-semibold text-sm hover:border-blue-300 transition;
+    }
+
+    .calc-type-btn-active {
+        @apply flex-1 px-4 py-2 rounded-lg border border-blue-600 bg-blue-600 text-white font-semibold text-sm transition;
+    }
+
+    .calc-error {
+        @apply text-red-500 text-sm font-medium;
+    }
+
+    .calc-result {
+        @apply mt-8 pt-6 border-t border-slate-100 space-y-3;
+    }
+
+    .calc-result-row {
+        @apply flex items-center justify-between text-sm text-slate-600;
+    }
+
+    .calc-result-total {
+        @apply text-base text-slate-900 font-bold pt-2 border-t border-dashed border-slate-200;
+    }
+
+    .calc-disclaimer {
+        @apply text-xs text-slate-400 pt-2;
+    }
+
+    .calc-cta {
+        @apply mt-4 w-full inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-lg transition;
+    }
+
+    .contact-section {
+        @apply py-20 bg-slate-50;
+    }
+
+    .contact-container {
+        @apply container mx-auto px-4;
+    }
+
+    .contact-card {
+        @apply max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row;
+    }
+
+    .contact-info-panel {
+        @apply md:w-1/2 p-8 bg-blue-900 text-white flex flex-col justify-between;
+    }
+
+    .contact-form-panel {
+        @apply md:w-1/2 p-8;
+    }
+
+    .form-group {
+        @apply space-y-1;
+    }
+
+    .form-label {
+        @apply block text-sm font-medium text-slate-700;
+    }
+
+    .form-input {
+        @apply w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none;
+    }
+
+    .btn-submit {
+        @apply w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition;
+    }
+
+    .auth-container {
+        @apply max-w-md mx-auto mt-10 p-8 bg-white rounded-2xl shadow-xl border border-slate-100;
+    }
+
+    .auth-title {
+        @apply text-3xl font-extrabold mb-2 text-center text-slate-900;
+    }
+
+    .auth-subtitle {
+        @apply text-sm text-slate-500 text-center mb-8;
+    }
+
+    .auth-link {
+        @apply text-blue-600 font-bold hover:underline;
+    }
+
+    .auth-footer {
+        @apply mt-6 text-center text-sm text-slate-500;
+    }
+
+    .input-error {
+        @apply text-red-500 text-xs mt-1;
+    }
+
+    .auth-error {
+        @apply mb-4 p-3 bg-red-50 text-red-600 text-sm text-center rounded-lg border border-red-100;
+    }
+}

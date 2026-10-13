@@ -1,0 +1,16 @@
+{
+  "trained": false,
+  "sampleCount": 41,
+  "minRequired": 15,
+  "kFolds": 5,
+  "metrics": {
+    "mae": 33.8,
+    "rmse": 62.01,
+    "r2": -0.152,
+    "ruleBasedMae": 39.65,
+    "evaluationMethod": "5-fold cross-validation",
+    "evaluatedSampleCount": 41
+  },
+  "trainedAt": "2026-10-12T21:00:15.768Z",
+  "message": "The trained model did not outperform the rule-based estimate (model MAE 33.8 hrs vs rule-based MAE 39.65 hrs), so predictions keep using the rule-based estimate until more real delivery data is available."
+}
